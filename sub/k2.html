@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>暗記問題（括弧内に答え）</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    .answer {
+      color: blue;
+      cursor: pointer;
+      border-bottom: 1px dashed gray;
+      font-weight: bold;
+      padding: 2px 4px;
+      transition: color 0.3s;
+    }
+
+    .hidden {
+      color: transparent;
+      text-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .question {
+        font-size: 1em;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>危険物の種類と性状</h1>
+
+    <div class="question">
+      ① 第１類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"酸化性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"燃えない"</strong></span>個体
+    </div>
+
+    <div class="question">
+      ② 第２類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"可燃性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"個体"</strong></span>である
+    </div>
+
+    <div class="question">
+      ③ 第３類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"自然発火・禁水性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"個体又は液体"</strong></span>である
+    </div>
+
+    <div class="question">
+      ④ 第４類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"引火性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"液体"</strong></span>である
+    </div>
+
+    <div class="question">
+      ⑤ 第５類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"自己反応性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"個体又は液体"</strong></span>である
+    </div>
+
+    <div class="question">
+      ⑥ 第６類<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"酸化性"</strong></span>で<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"燃えない"</strong></span>液体である
+    </div>
+
+    <div class="question">
+      ⑦ 危険物には<span class="answer hidden" onclick="toggleAnswer(this)"><strong>"気体"</strong></span>はない
+    </div>
+
+    <p><a href="../index.html">ホーム</a>　<a href="sub/k1.html">次に進む</a></p>
+  </div>
+
+  <script>
+    function toggleAnswer(el) {
+      el.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>

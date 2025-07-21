@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>暗記問題（括弧内に答え）</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+
+    .answer {
+      color: blue;
+      cursor: pointer;
+      border-bottom: 1px dashed gray;
+      font-weight: bold;
+      padding: 2px 4px;
+      transition: color 0.3s;
+    }
+
+    .hidden {
+      color: transparent;
+      text-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .question {
+        font-size: 1em;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>危険物とは何か</h1>
+
+    <div class="question">
+      ① 危険物とは、消防法 <span class="answer hidden" onclick="toggleAnswer(this)"><strong>別表第一</strong></span> の品名欄に掲げる物品である。
+    </div>
+
+    <div class="question">
+      ② 危険物は、その性状の違いによって <span class="answer hidden" onclick="toggleAnswer(this)"><strong>第一類</strong></span> から <span class="answer hidden" onclick="toggleAnswer(this)"><strong>第６類</strong></span> に区分される。
+    </div>
+
+    <div class="question">
+      ③ 乙種第４の危険物取扱者免状で取り扱える危険物は <span class="answer hidden" onclick="toggleAnswer(this)"><strong>第４類</strong></span> の危険物である。
+    </div>
+
+
+    <p><a href="../index.html">ホーム</a>　<a href="sub/k1.html">次に進む</a></p>
+  </div>
+
+  <script>
+    function toggleAnswer(el) {
+      el.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
